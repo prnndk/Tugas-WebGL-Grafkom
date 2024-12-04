@@ -272,11 +272,11 @@ void main () {
   // compiles and links the shaders, looks up attribute and uniform locations
   const meshProgramInfo = webglUtils.createProgramInfo(gl, [vs, fs]);
 
-  const response = await fetch("../data/jamv2.obj");
+  const response = await fetch("data/jamv2.obj");
   const text = await response.text();
   const obj = parseOBJ(text);
 
-  const mtlResponse = await fetch("../data/jamv2.mtl");
+  const mtlResponse = await fetch("data/jamv2.mtl");
   const mtlText = await mtlResponse.text();
   const materials = await parseMTL(mtlText);
 
